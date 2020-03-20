@@ -3,8 +3,8 @@
 
 :root {
   --modal-duration: 1s;
-  --primary-color: #30336b;
-  --secondary-color: #be2edd;
+  --primary-color: #0052cc;
+  --secondary-color: #C6D3E3;
 }
 
 * {
@@ -20,12 +20,12 @@ body {
 body.show-nav {
   /* Navigation Width*/
   transform: translateX(200px);
+  background-color: rgba(0,0,0,0.3);
 }
 
 /* Navigation */
 nav {
   background-color: var(--primary-color);
-  border-right: 2px solid rgba(200,200,200, 0.1);
   color: #fff;
   position: fixed;
   top: 0;
@@ -34,6 +34,7 @@ nav {
   height: 100vh;
   z-index: 100;
   transform: translateX(-100%);
+  display: inline-block;
 }
 
 nav .logo {
@@ -54,13 +55,9 @@ nav ul {
 }
 
 nav ul li {
-  border-bottom: 2px solid rgba(200,200,200, 0.1);
   padding: 20px;
 }
 
-nav ul li:first-of-type {
-  border-top: 2px solid rgba(200,200,200, 0.1);
-}
 
 nav ul li a {
   color: #fff;
@@ -96,7 +93,7 @@ input[type='submit'] {
   background-color: var(--secondary-color);
   border: 0;
   border-radius: 5px;
-  color: #fff;
+  color: #29364A;
   cursor: pointer;
   padding: 8px 12px;
 }
