@@ -14,6 +14,12 @@
 body {
   font-family: 'Lato', sans-serif;
   margin: 0;
+  transition: transform 0.3s ease;
+}
+
+body.show-nav {
+  /* Navigation Width*/
+  transform: translateX(200px);
 }
 
 /* Navigation */
@@ -103,7 +109,7 @@ button:focus {
   background-color: rgb(0, 0, 0, 0.3);
   position: absolute;
   top: 20px;
-  right: 20px;
+  left: 20px;
 }
 
 .cta-btn {
@@ -132,6 +138,10 @@ button:focus {
   bottom: 0;
 }
 
+.modal-container.show-modal {
+  display: block;
+}
+
 .modal {
   background-color: #fff;
   border-radius: 5px;
@@ -143,6 +153,8 @@ button:focus {
   transform: translate(-50%, -50%);
   max-width: 100%;
   width: 400px;
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
 }
 
 .modal-header {
@@ -153,7 +165,6 @@ button:focus {
 
 .modal-header h3 {
   margin: 0;
-  border-bottom: 1px solid #333;
 }
 
 .modal-content {
@@ -180,4 +191,14 @@ button:focus {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
